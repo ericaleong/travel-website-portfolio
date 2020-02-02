@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Archivo+Narrow|Libre+Baskerville&display=swap');
+
+
+/* resets */
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: #FDFBF7;
+}
+/* Background colour isn't necessarily a reset, but it makes the entire page an off white colour */
+
+
+/* Nav bar, logo, hero image */
+.logo {
+  margin-top: 1em;
+  margin-left: 2em;
+
+  position: absolute;
+
+  color: #FDFBF7;
+}
+
+.logo:hover {
+  color: #8BAAAD;
+}
+
+.homepage {
+  background-image: url('../assets/IMG_4596.jpeg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+
+
+  margin: 0;
+  border: 0;
+  padding: 0;
+
+  list-style: none;
+  
+  background-color: #364156;
+}
+
+nav a {
+  display: block;
+
+  padding: 2em;
+
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  font-size: 1em;
+  font-family: 'Archivo Narrow', sans-serif;
+  color: #FDFBF7;
+}
+
+nav a:hover {
+  background: #8BAAAD;
+  color: #002235;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  /* the above code will make sure the hero image will stay centered as it shrinks down instead of pushing off to the left side */
+
+  padding: 2em;
+}
+
+section.hero{
+margin: 0;
+}
+
+.hero h1 {
+  margin: 0;
+  margin-top: 1.5em;
+  padding: 0;
+
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  font-size: 3em;
+  font-family: 'Archivo Black', sans-serif;
+  color: #002235;
+}
+
+
+/* About section */
+.about {
+  margin-top: 10em;
+  margin-bottom: 5em;
+}
+/* throughout the CSS you'll notice high numbered ems (such as 10ems) to really space out each section so as you scroll there's a lot of focus on the sections without information floating above or below */
+
+.about h1 {
+  display: flex;
+  justify-content: left;
+
+  margin: 2em;
+  margin-top: 2em;
+
+  letter-spacing: 0.1em;
+
+  font-size: 2.2em;
+  font-family: 'Archivo Narrow', sans-serif;
+  color: #8BAAAD;
+}
+
+.about p {
+  margin: 1.5em;
+  margin-left: 10em;
+
+  text-align: justify;
+
+  font-family: 'Libre Baskerville', serif;
+  color: #002235;
+  font-size: calc(13px + (16 - 13) * ((100vw - 600px) / (800 - 60)));
+}
+
+#erica-photo {
+  margin-top: 6em;
+  margin-left: 2em;
+  margin-right: 12em;
+
+  float: right;
+  clip-path: polygon(17% 0, 100% 0%, 84% 100%, 0% 100%);
+  shape-outside: polygon(17% 0, 100% 0%, 84% 100%, 0% 100%);
+}
+/* At first I thought shape-outside would would have to be under the paragraph to give it the slant on the right side, but it actually belongs to the photo which I didn't know! */
+
+
+/* Places section */
+.places h1, .contributors h1, .contact h1 {
+  display: flex;
+  justify-content: left;
+
+  margin: 2em;
+  margin-top: 8em;
+
+  letter-spacing: 0.1em;
+
+  font-size: 2.2em;
+  font-family: 'Archivo Narrow', sans-serif;
+  color: #8BAAAD;
+}
+
+.places h3 {
+  margin-top: 5em;
+  margin-left: 4em;
+  margin-right: 4em;
+  padding: 1em;
+
+  background-color: #364156;
+  
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  font-size: 1.4em;
+  font-family: 'Archivo Black', sans-serif;
+  color: #FDFBF7;
+}
+
+.places img {
+  padding: 1em;
+}
+
+.places p {
+  text-align: justify;
+  padding: 1em;
+
+  /* Font-size calc for fluid typography is referenced from css-tricks.com/snippets/css/fluid-typography/ */
+  font-size: calc(13px + (16 - 13) * ((100vw - 600px) / (800 - 60)));
+  font-family: 'Libre Baskerville', serif;
+  color: #002235;
+}
+
+.places b {
+  color: #8BAAAD;
+}
+
+.japan-container, .portugal-container, .spain-container, .morocco-container, .india-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-left: 6em;
+  margin-right: 6em;
+}
+/* Originally I was using a grid to make the gallery instead of flex (I had the paragraphs next to the photos as if it were it's own item in the grid), which laid out everything really nicely, but I found it diffiult to have to responsive how it would with a flex-wrap. The 3 columns go down to 1 nicely with the wrap, which is great for mobile */
+
+.photo-container {
+  display: grid;
+
+  padding: 0.5em;
+
+  box-shadow: 0 0 10px rgba(14, 14, 14, 0.25);
+
+  background-color: #fff;
+
+  text-align: center;
+  letter-spacing: 0.1em;
+
+  font-family: 'Archivo Narrow', sans-serif;
+  color: #002235;
+}
+
+.places h4{
+  padding: 0.5em;
+  padding: 0.8em;
+
+  font-size: 1.2em;
+}
+
+
+/* Contributors section */
+.contributor-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.erica-con, .indie-con {
+  display: grid;
+  grid-auto-columns: 1fr, 1fr;
+  grid-auto-rows: 1fr, 3fr;
+
+  margin: 1em; 
+  border-radius: 20px;
+
+  max-width: 50vw;
+  max-height: 50vh;
+
+  box-shadow: 0 0 10px rgba(14, 14, 14, 0.25);
+  background-color: #fff;
+}
+
+.erica-con img, .indie-con img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+
+  border-radius: 20px;
+}
+
+.erica-con h2, .indie-con h2 {
+  margin-top: 1em;
+
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  text-align: center;
+
+  letter-spacing: 0.1em;
+
+  font-size: 2em;
+  font-family: 'Archivo Narrow', sans-serif;
+  color: #8BAAAD;
+}
+
+.erica-list, .indie-list{
+  margin-right: 1.2em;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+
+  position: relative;
+
+  list-style: none;
+  text-align: justify;
+  letter-spacing: 0.1em;
+  line-height: 2em;
+
+  font-size: 0.8em;
+  font-family: 'Archivo Narrow', sans-serif;
+  color: #002235;
+}
+
+
+/* Contact section */
+.contact form {
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 10em;
+  margin-bottom: 2em;
+
+  max-width: 40vw;
+  max-height: 90vh;
+
+  background-color: white;
+
+  box-shadow: 0 0 10px rgba(14, 14, 14, 0.25);
+}
+
+.contact h3 {
+  margin: 0;
+  padding: 2em;
+  
+  background-color: #364156;
+  
+  text-align: center;
+  
+  font-size: 1em;
+  font-family: 'Libre Baskerville', serif;
+  color: #FDFBF7
+}
+
+.contact label, p {
+  margin-top: 1em;
+  margin-left: 0.5em;
+
+  letter-spacing: 0.1em;
+
+  font-size: 1.2em;
+  font-family: 'Archivo Narrow', sans-serif;
+  color: #002235;
+}
+
+.contact, p {
+  margin: 0;
+  margin-left: 1em;
+}
+/* The labels and paragraph in the contact form share lots of same properties, but need no margin on the paragraph so the code above overrides the margin properties only */
+
+.contact input, textarea {
+  padding: 0.3em;
+
+  border-style: hidden;
+  border-bottom: 1px solid #8BAAAD;
+
+  font-size: 1em;
+  font-family: 'Libre Baskerville', serif;
+  color: #364156;
+
+}
+
+#submit{
+  max-width: 20vw;
+  max-height: 8vh;
+
+  margin-left: 7em;
+  margin-bottom: 5em;
+  padding: 1em;
+
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+
+  background-color: #8BAAAD;
+
+  font-size: 1.5em;
+  font-family: 'Archivo Black', sans-serif;
+  color: #002235;
+}
+
+#submit:hover {
+  background-color: #002235;
+  color: #FDFBF7;
+}
+
+
+/* Footer section */
+footer ul {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+
+  margin: 0;
+  border: 0;
+  padding: 1em;
+
+  list-style: none;
+  
+  background-color: #364156;
+}
+
+footer li {
+  padding: 1em;
+
+  text-decoration: none;
+
+  color: #FDFBF7;
+}
+
+footer .copyright {
+    margin-left: 2em;
+    margin-top: 1em;
+    padding: 1em;
+  
+    position: absolute;
+  
+    color: #FDFBF7;
+    font-family: 'Libre Baskerville', serif;
+    font-size: calc(12px + (16 - 12) * ((100vw - 600px) / (800 - 60)));
+}
+
+a:visited {
+  text-decoration: none;
+  color: #FDFBF7;
+}
+
+
+/* Media queries for a cleaner responsive design - especially for the gallery and contributor cards */
+@media only screen and (max-width: 1250px) {
+  .about h1 {
+    margin-bottom: 2em;
+  }
+
+  #erica-photo {
+    margin-top: 10em;
+  }
+
+  .photo-container {
+    margin-bottom: 2em;
+  }
+
+  .places p{
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 1090px) {
+  .erica-con h2, .indie-con h2{
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .erica-con h2, .indie-con h2{
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 901px){
+  .japan-container, .portugal-container, .spain-container, .morocco-container, .india-container {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  .logo {
+    margin-top: 0.5em;
+    margin-left: 1em;
+  } 
+
+  nav a {
+    padding-left: 0.2em;
+    font-size: 0.8em;
+  }
+
+  .about {
+    margin: 0;
+  }
+
+  .about h1 {
+    margin: 2em;
+    margin-top: 2em;
+  
+    font-size: 1.8em;
+  }
+
+  #erica-photo {
+    margin-left: 5em;
+    margin-top: 2em;
+
+    float: none;
+  }
+
+  .about p {
+    margin-left: 1em;
+    padding: 1em;
+  }
+
+  .places h1, .contributors h1, .contact h1 {
+    margin-top: 3em;
+    margin-left: 1em;
+    margin-right: 1em;
+
+    font-size: 1.8em;
+  }
+
+  .places h3 {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+
+  .places p {
+    margin-bottom: 2em;
+  }
+
+  .contributor-cards {
+  justify-content: center;
+  }
+
+  .erica-con, .indie-con {
+    margin-right: 0;
+    margin-bottom: 2em;
+    margin-left: 2em;
+
+    min-width: 400px;
+  }
+
+  .erica-list, .indie-list {
+    padding: 0.2em;
+    margin-left: 0.5em;
+
+    font-size: 0.7em;
+  }
+
+  .contact form {
+   margin: 0;
+   margin-left: 6em;
+
+   min-width: 300px;
+  }
+
+  #submit{
+    margin: 2em;
+
+    font-size: 0.8em;
+  }
+
+  footer .copyright{
+    margin-top: 2em;
+
+    font-size: 0.5em;
+  }
+
+  footer li {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  nav ul{
+    align-items: flex-end;
+    flex-direction: column;
+
+    padding: 0;
+
+    font-size: 0.8em;
+  }
+}
